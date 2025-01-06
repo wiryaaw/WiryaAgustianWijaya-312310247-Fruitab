@@ -51,5 +51,11 @@ public class daftar_page extends AppCompatActivity {
             }
         });
 
+        // Atur warna status bar menjadi hitam
+        getWindow().setStatusBarColor(getResources().getColor(android.R.color.black));
+
+        // Pastikan teks dan ikon status bar berwarna putih
+        getWindow().getDecorView().setSystemUiVisibility(0); // 0 untuk ikon putih
+
     }
 }

@@ -1,12 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Tema dasar -->
     <style name="Base.Theme.Fruitab" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/black</item>
-        <item name="colorPrimaryDark">@color/black</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:windowLightStatusBar">false</item> <!-- Teks status bar terang -->
+        <item name="colorPrimary">@android:color/black</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
         <item name="colorAccent">@color/hijau</item>
-        <!-- Customize your theme here. -->
     </style>
 
+    <!-- Tema utama -->
     <style name="Theme.Fruitab" parent="Base.Theme.Fruitab" />
 </resources>
