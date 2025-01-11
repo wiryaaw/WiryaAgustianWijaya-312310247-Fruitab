@@ -11,13 +11,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class varian_anggur extends AppCompatActivity {
+public class anggur_muscat extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_varian_anggur);
+        setContentView(R.layout.activity_anggur_muscat);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -28,20 +28,17 @@ public class varian_anggur extends AppCompatActivity {
         imageView6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(varian_anggur.this, menu_utama.class);
+                Intent intent = new Intent(anggur_muscat.this, varian_anggur.class);
                 startActivity(intent);
             }
         });
 
-        // Temukan ImageView dengan ID imageView10
-        ImageView imageView10 = findViewById(R.id.imageView10);
 
-        // Tambahkan onClickListener untuk navigasi
-        imageView10.setOnClickListener(new View.OnClickListener() {
+        ImageView imageView11 = findViewById(R.id.imageView11);
+        imageView11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigasi ke AnggurMuscat
-                Intent intent = new Intent(varian_anggur.this, anggur_muscat.class);
+                Intent intent = new Intent(anggur_muscat.this, menu_utama.class);
                 startActivity(intent);
             }
         });
@@ -51,5 +48,6 @@ public class varian_anggur extends AppCompatActivity {
 
         // Pastikan teks dan ikon status bar berwarna putih
         getWindow().getDecorView().setSystemUiVisibility(0); // 0 untuk ikon putih
+
     }
 }
