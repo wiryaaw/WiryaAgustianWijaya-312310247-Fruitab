@@ -2,8 +2,10 @@ package com.fresh.fruitab;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +25,19 @@ public class anggur_muscat extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // Ambil TextView dari XML
+        TextView textView11 = findViewById(R.id.textView11);
+
+        // Buat teks dengan HTML
+        String text = "<b>Rasa:</b> Manis dengan aroma muscat yang khas.<br>" +
+                "<b>Warna:</b> Hijau kekuningan yang cerah.<br>" +
+                "<b>Tekstur:</b> Renyah dan juicy.<br>" +
+                "<b>Ukuran:</b> Buah berukuran besar dan tanpa biji.";
+
+        // Atur teks ke TextView dengan Html formatting
+        textView11.setText(Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY));
+
 
         ImageView imageView6 = findViewById(R.id.imageView6);
         imageView6.setOnClickListener(new View.OnClickListener() {
